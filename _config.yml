@@ -10,7 +10,7 @@ title: Inspired-Sec
 email: jcatrambone@inspired-sec.com
 description: Penetration Testing tips and tricks that will hopefully make your struggles at least a little bit better :)
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://inspired-sec.com" # the base hostname & protocol for your site
+url: "blog.inspired-sec.com" # the base hostname & protocol for your site
 twitter_username: jscatrambone
 github_username:  jcatrambone94 
 paginate: 5
