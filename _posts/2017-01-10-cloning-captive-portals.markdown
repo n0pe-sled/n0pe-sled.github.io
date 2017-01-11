@@ -46,7 +46,7 @@ Here we will edit the HTML for the situation.  In my case I was looking for an A
 Once you have made your changes make sure to click "Save HTML" to overwrite the previous injection.
 
 Now all that is left is to click "Clone Portal" and set a Portal Name, and under Injection Set select Harvester.
-![portal_auth_setup4.png]({{ site.url }}/assets/Captive-Portals/Portal_auth_setup-4.png)
+![portal_auth_setup4.png]({{ site.url }}/assets/Captive-Portals/portal_auth_setup-4.png)
 
 Once it has finished cloning we have to use the "Evil Portal" Plugin to host the newly created captive portal.  Navigate to the Evil Portal Module, and Activate the captive portal by pressing "Start" under the controls panel.  Once Started Activate your saved portal.  When the portal is activated and the cative portal is started you can view a preview of the portal under live preview!
 ![evil_portal_setup.png]({{ site.url }}/assets/Captive-Portals/evil_portal_setup.png)
