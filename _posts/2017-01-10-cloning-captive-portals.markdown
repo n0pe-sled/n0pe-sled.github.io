@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Cloning and Hosting Evil Captive Portals using a Wifi PineApple" 
+title:  "Cloning and Hosting Evil Captive Portals using a Wifi PineApple"
 date:   2017-01-10 19:45:31 +0530
 categories: Archive
 ---
-Recently, I was on a Wifi Assesment and one of our objectives was to obtain the Access Code to a guest wireless network.  To do this we decided to use a [Wifi Pineapple - Tetra](https://wifipineapple.com/).
+Recently, I was on a Wifi Assessment and one of our objectives was to obtain the Access Code to a guest wireless network.  To do this we decided to use a [Wifi Pineapple - Tetra](https://wifipineapple.com/).
 
 For this post I will go over the process of cloning a website to use for your captive portal using the [Portal Auth](https://github.com/sud0nick/PortalAuth) module, then hosting it with the [Evil Portal](https://github.com/frozenjava/evilportal) Module.  I will not be going over the initial setup of the Wifi Pineapple.  For more information on setup I suggest you look [here](https://www.youtube.com/watch?v=gqMW0NeODAQ).
 
@@ -48,7 +48,7 @@ Once you have made your changes make sure to click "Save HTML" to overwrite the 
 Now all that is left is to click "Clone Portal" and set a Portal Name, and under Injection Set select Harvester.
 ![portal_auth_setup4.png]({{ site.url }}/assets/Captive-Portals/portal_auth_setup-4.png)
 
-Once it has finished cloning we have to use the "Evil Portal" Plugin to host the newly created captive portal.  Navigate to the Evil Portal Module, and Activate the captive portal by pressing "Start" under the controls panel.  Once Started Activate your saved portal.  When the portal is activated and the cative portal is started you can view a preview of the portal under live preview!
+Once it has finished cloning we have to use the "Evil Portal" Plugin to host the newly created captive portal.  Navigate to the Evil Portal Module, and Activate the captive portal by pressing "Start" under the controls panel.  Once Started Activate your saved portal.  When the portal is activated and the captive portal is started you can view a preview of the portal under live preview!
 ![evil_portal_setup.png]({{ site.url }}/assets/Captive-Portals/evil_portal_setup.png)
 
 Finally all we have to do is set up the public AP for our target to connect too!  Under "Networking" set the "Open AP SSID" to something that fits your target, ensure that "Hide Open AP" is not checked, then Click "Update Access Point".  Now your captive portal should be up and running!
