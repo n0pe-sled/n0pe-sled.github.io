@@ -5,7 +5,7 @@ date:   2017-01-20 19:45:31 +0530
 categories: Archive
 ---
 
-Lets be honest implementing persistence can be hard, messy, and get you caught.  Fuzzy Security did a great overview of some of the most common techniques used today and how to implement them.  You can find that [here](http://www.fuzzysecurity.com/tutorials/19.html).
+Lets be honest implementing persistence on a pentest can be hard, messy, and get you caught.  Fuzzy Security did a great overview of some of the most common techniques used today and how to implement them.  You can find that blog post [here](http://www.fuzzysecurity.com/tutorials/19.html).
 
 Some of the persistence techniques mentioned are:
 1. Persistence through the Registry
@@ -14,7 +14,7 @@ Some of the persistence techniques mentioned are:
 4. Persistence through the MSDTC Service
 5. WMI Permanent Event Subscriptions
 
-Personally I like to use WMI as my persistence mechanism.  It is hard to detect, difficult to remove, doesn't require payloads saved on disk, and **_can_** be implemented easily. So how does it work.  Well at a very high level to establish persistence it is a three step process.
+Personally I like to use WMI as my persistence mechanism.  It is hard to detect, difficult to remove, doesn't require payloads saved on disk, and **_can_** be implemented easily. So how does it work?  Well, at a very high level to establish persistence it is a three step process.
 
 1. Establish an event filter to trigger on system boot
 2. Establish an command line consumer to run the payload
@@ -25,11 +25,11 @@ To make this process a little easier I decided to make a quick PowerShell script
 To use this script simply edit the Payload to match your current environment.  Import the script and run Install-Persistence.
 ![Install-Persistence]({{ site.url }}/assets/WMI-Persistence/Install.png)
 
-To check to make sure the it installed correctly simply run Check-WMI
+To make sure it installed correctly, simply run Check-WMI.
 ![Check-Persistence]({{ site.url }}/assets/WMI-Persistence/Check.png)
 
-Finally to remove persistence ensure that the variables for $EventFilterName and $EventConsumerName match the names assigned when it was installed.  By default these values are 'Cleanup' and 'DataCleanup' Respectively.
+Finally, to remove persistence, ensure that the variables for $EventFilterName and $EventConsumerName match the names assigned when it was installed.  By default these values are 'Cleanup' and 'DataCleanup' Respectively.  Then run Remove-Persistence to remove each element of persistence.
 
-There are also a ton of tools that you can use to establish persistence using WMI, like [PowerSpoilt](https://github.com/PowerShellMafia/PowerSploit) and [PowerLurk](https://github.com/Sw4mpf0x/PowerLurk/blob/master/PowerLurk.ps1).
+There are also a ton of tools that you can use to establish persistence using WMI, like [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) and [PowerLurk](https://github.com/Sw4mpf0x/PowerLurk/blob/master/PowerLurk.ps1).
 
 If you have any feedback, advice, or comments let me know!
