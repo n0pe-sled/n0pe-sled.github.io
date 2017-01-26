@@ -8,6 +8,7 @@ categories: Archive
 Lets be honest implementing persistence on a pentest can be hard, messy, and get you caught.  Fuzzy Security did a great overview of some of the most common techniques used today and how to implement them.  You can find that blog post [here](http://www.fuzzysecurity.com/tutorials/19.html).
 
 Some of the persistence techniques mentioned are:
+
 1. Persistence through the Registry
 2. Scheduled Backdoors using Scheduled Tasks
 3. Process Resource Hooking
