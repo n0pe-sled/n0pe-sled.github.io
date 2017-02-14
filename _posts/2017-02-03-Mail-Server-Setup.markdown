@@ -20,7 +20,7 @@ First, let’s outline the process, then dive deeper into each step:
 
 ## 1) Obtain a VPS/Server/IP trusted by the target: ##
 
-To use this script, you must have a Domain Name, and access to a server running Debian 8. You must have the ability to set the PTR record of the IP Address assigned to your server. There are many different options available to purchase a virtual private server(VPS). Some notable ones include [DigtalFyre](https://www.digitalfyre.com), [Linode](https://www.linode.com), and [AWS Lightsail](https://amazonlightsail.com).
+To use this script, you must have a Domain Name, and access to a server running Debian 8. You must have the ability to set the PTR record of the IP Address assigned to your server. There are many different options available to purchase a virtual private server(VPS). Some notable ones include [DigtalFyre](https://www.digitalfyre.com), [Linode](https://www.linode.com), and [DigitalOcean](https://www.digitalocean.com/)
 
 ## 2) Setup Secure Access to the Server ##
 
