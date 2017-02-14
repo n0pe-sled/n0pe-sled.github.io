@@ -28,7 +28,7 @@ The industry standard for accessing a server remotely is through SSH. Ideally, S
 
 ## 3) Disable ipv6 and remove Exim
 
-Debian 8 comes with the Exim mail service by default. Eximcan cause problems when installing Postfix and should be removed. On the same note, IPv6 can create additional problems and should be disabled. The command “Debian Prep” will remove Exim, and disable IPv6. The script will also prompt you for the Mail Server’s Domain Name. It will use this Domain name to change the Hostname of the System. After all of these changes, the system will reboot.
+Debian 8 comes with the Exim mail service by default. Exim can cause problems when installing Postfix and should be removed. On the same note, IPv6 can create additional problems and should be disabled. The command “Debian Prep” will remove Exim, and disable IPv6. The script will also prompt you for the Mail Server’s Domain Name. It will use this Domain name to change the Hostname of the System. After all of these changes, the system will reboot.
 
 ## 4) Install SSL Certs From Lets Encrypt ##
 
