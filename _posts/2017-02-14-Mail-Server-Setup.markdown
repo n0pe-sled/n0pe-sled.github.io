@@ -42,7 +42,15 @@ Now that all of the prerequisites are complete, we can start installing the actu
 2. DomainKeys Identified Mail (DKIM)
 3. Domain Message Authentication, Reporting, and Conformance (DMARC)
 
-This script will prompt you for the domain name you would like to use, and then setup all of the rest for you! Once the command has finished you should see a service status report for Postfix, Dovecot, OpenDKIM, and OpenDMARC. Each of these services should report “active (running)” as pictured below.
+In order to setup the Mail Server correctly, we need more information.  After running the command "Install Mail Server" you will be prompted for the three things.
+
+1. Domain Name for the mail server
+2. A user to receive mail for the root account
+3. Relay Host IP address
+
+These inputs should be rather self explanatory.  The Domain name should be the same name that is set to the host in DNS.  The user set to receive email for the root account should be set to the user created when establishing SSH access. Finally the relay host is the host that is running your phishing framework.  **If you are hosting your phishing framework on the same VPS then just leave this input blank**.  Otherwise enter the IP address of the system hosting GoPhish or your Cobalt Strike teamserver.
+
+Once the command has finished you should see a service status report for Postfix, Dovecot, OpenDKIM, and OpenDMARC. Each of these services should report “active (running)” as pictured below.
 ![Mail-Server-Status]({{ site.url }}/assets/Mail-Server-Setup/service-status.png)
 
 ## 6) Add Aliases ##
