@@ -3,6 +3,7 @@ layout: post
 title:  "Cloning and Hosting Evil Captive Portals using a Wifi PineApple"
 date:   2017-01-10 19:45:31 +0530
 categories: Archive
+author: Julian Catrambone
 ---
 Recently, I was on a Wifi Assessment and one of our objectives was to obtain the Access Code to a guest wireless network.  To do this we decided to use a [Wifi Pineapple - Tetra](https://wifipineapple.com/).
 

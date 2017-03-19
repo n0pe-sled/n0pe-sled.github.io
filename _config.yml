@@ -11,11 +11,11 @@ email: jcatrambone@inspired-sec.com
 description: Penetration Testing tips and tricks that will hopefully make your struggles at least a little bit better :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.inspired-sec.com" # the base hostname & protocol for your site
-twitter_username: jscatrambone
+twitter_username: n0pe_sled
 github_username:  jcatrambone94
 paginate: 5
 
-gems: [jekyll-paginate, kramdown]
+gems: [jekyll-paginate, kramdown, jekyll-redirect-from]
 # Build settings
 markdown: kramdown
 google_analytics: UA-93958329-1

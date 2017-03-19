@@ -4,29 +4,12 @@ title : About
 permalink: /about/
 ---
 
-<h2>About</h2>
-<p>
-I am a penetration tester with    <a href="https://verisgroup.com/">Veris Group</a>’s Adaptive Threat
-    Division. I work on a wide variety of assessments, but focus primarily on
-    network, physical, and red teaming.
-</p>
-<p>
-    In my free time, I try to develop some tools to make me and my teams life a
-    little easier, and do some research to catch up to my peers. I will do my
-    best to keep this updated with tips and tricks I come across while
-    learning, and developing any techniques.
-</p>
-<p>
-    Reach me at:
-</p>
-<ul>
-    <li>
-        Twitter at <a href="https://twitter.com/jscatrambone">@jscatrambone</a>
-    </li>
-    <li>
-        GitHub at <a href="https://github.com/jcatrambone94">jcatrambone94</a>
-    </li>
-    <li>
-        Email at jcatrambone@inspired-sec.com
-    </li>
-</ul>
+## About me!
+
+I am a penetration tester formally with [ATD](ps://twitter.com/search?q=%23ATD4Life&src=hash).  I have learned almost everything I know from those guys and wish them all the best in there future endeavors!
+
+I enjoy Network Assessments,  Physical Assessments, and Red Team Engagements.  I tolerate Web App assessments but they can be fun sometimes!
+
+If you have any questions or want to get in touch feel free to follow me on [twitter](https://twitter.com/n0pe_sled) and send a DM!  If you are interested in any of my other work you can find most of it on my [Github](https://github.com/jcatrambone94).
+
+Cheers!

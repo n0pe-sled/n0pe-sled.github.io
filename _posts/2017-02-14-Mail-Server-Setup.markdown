@@ -3,6 +3,7 @@ layout: post
 title:  "Mail Servers Made Easy"
 date:   2017-02-14 19:45:31 +0530
 categories: Archive
+author: Julian Catrambone
 ---
 
 Setting up a phishing server is a very long and tedious process. It can take hours to setup, and can be compromised in minutes. The esteemed gentlemen [@cptjesus](https://twitter.com/cptjesus) and [@Killswitch_GUI](https://twitter.com/Killswitch_GUI) have already made leaps and bounds in this arena. I took everything that I learned from them on setting up a server, and applied it to a bash script to automate the process. Before we get to the script, let’s go over the basics to setting up a mail server.

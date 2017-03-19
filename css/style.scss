@@ -14,11 +14,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       #ffffff;
+$background-color: #3f3f3f;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
+$grey-color:       #ffffff;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: #e51e00 !important;
+    color: #36dcf9 !important;
     text-decoration: none;
 
     &:visited {
@@ -165,7 +165,7 @@ a {
       }
     }
     &.postLink{
-      color: black !important;
+      color:  #ffffff !important;
       &:hover {
 
           border-bottom: 1px dotted black ;
@@ -176,7 +176,7 @@ a {
       }
     }
     &.post-title-link{
-      color: black !important;
+      color:  #ffffff !important;
       &:hover {
 
           border-bottom: 1px dotted black !important ;
@@ -214,9 +214,9 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid #000000;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #2b2b2b;
 }
 
 code {
