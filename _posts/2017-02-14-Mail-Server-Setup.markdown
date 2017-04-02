@@ -52,7 +52,7 @@ In order to setup the Mail Server correctly, we need more information.  After ru
 These inputs should be rather self explanatory.  The Domain name should be the same name that is set to the host in DNS.  The user set to receive email for the root account should be set to the user created when establishing SSH access. Finally the relay host is the host that is running your phishing framework.  **If you are hosting your phishing framework on the same VPS then just leave this input blank**.  Otherwise enter the IP address of the system hosting GoPhish or your Cobalt Strike teamserver.
 
 Once the command has finished you should see a service status report for Postfix, Dovecot, OpenDKIM, and OpenDMARC. Each of these services should report “active (running)” as pictured below.
-![Mail-Server-Status]({{ site.url }}/assets/Mail-Server-Setup/service-status.png)
+![Mail-Server-Status](https://{{ site.url }}/assets/Mail-Server-Setup/service-status.png)
 
 ## 6) Add Aliases ##
 
@@ -61,7 +61,7 @@ Once the server is up and running, we need to tell it where to send mail to and 
 ## 7) Configure DNS Entries ##
 
 Finally we can add DNS entries to our domain to ensure that SPF, DKIM, and DMARC are working properly. Using the command “Get DNS Entries” will print the DNS entries to the console, as shown below.
-![dns]({{ site.url }}/assets/Mail-Server-Setup/dns.png)
+![dns](https://{{ site.url }}/assets/Mail-Server-Setup/dns.png)
 
 ## 8) Testing your new mail server ##
 
