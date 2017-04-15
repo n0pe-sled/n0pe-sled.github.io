@@ -6,7 +6,7 @@
 <center>  {{site.description}} </center>
 </div>
 <div class="wrapper">
-  <div class="trigger site-navigation">
+ <center> <div class="trigger site-navigation">
     <a class="page-link" href="{{site.url}}{{site.baseurl}}">HOME</a>
 
     {% for sitePage in site.pages %}
@@ -15,5 +15,5 @@
     <span class="exclamationMark">/</span><a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a>
     {% endif %}
     {% endfor %}
-  </div>
+  </div> </center>
 </div>

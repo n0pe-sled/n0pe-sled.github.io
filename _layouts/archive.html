@@ -14,9 +14,9 @@ layout: default
 	<article class="post-preview">
     <a href="{{ post.url }}" class="post-title">
     	<h1 class="post-title"><a class="post-title-link" href="{{post.url}}">{{ post.title }}</a></h1>
-    	<h1>{{ post.date | date: "%B %e, %Y" }}</h1>
+    	<h1 align=center>{{ post.date | date: "%B %e, %Y" }}</h1>
     </a>
-    <p class="tab"><span class="post-entry">{{ post.content | truncatewords: 100 | strip_html | xml_escape}}</span><a href="{{ post.url }}"><b> [more]</b></a></p>
+    <p align=justify class="tab"><span class="post-entry">{{ post.content | truncatewords: 200 | strip_html | xml_escape}}</span><a href="{{ post.url }}"><b> [more]</b></a></p>
     </article>
 {% endfor %}
 

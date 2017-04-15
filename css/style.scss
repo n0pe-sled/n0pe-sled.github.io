@@ -23,7 +23,7 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    900px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -137,8 +137,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
+    font-weight: 200}
 
 
 
@@ -380,7 +379,7 @@ pre {
   margin-top: 1em;
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: #ffffff;
   }
 }
 .site-description {
@@ -388,13 +387,17 @@ pre {
   letter-spacing: 2px;
   text-indent: 6px;
   font-family: 'Josefin Sans';
+  &,
+  &:visited {
+    color: #ffffff;
+  }
 }
 .exclamationMark {
   padding-left: 2em;
   padding-right: 2em;
 }
 .site-navigation {
-  color: #aaa;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
@@ -566,11 +569,11 @@ pre {
   margin-bottom: $spacing-unit;
 }
 .post-title {
-  font-size: 62px;
+  font-size: 48px;
 
   text-align: center;
   font-family: "PT Sans";
-  font-weight: 900;
+  font-weight: 650;
   @include media-query($on-laptop) {
     font-size: 36px;
   }
