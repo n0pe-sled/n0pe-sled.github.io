@@ -4,8 +4,6 @@ title : About
 permalink: /about/
 ---
 
-## About me!
-
 I am a penetration tester formally with [ATD](ps://twitter.com/search?q=%23ATD4Life&src=hash).  I have learned almost everything I know from those guys and wish them all the best in there future endeavors!
 
 I enjoy Network Assessments,  Physical Assessments, and Red Team Engagements.  I tolerate Web App assessments but they can be fun sometimes!
