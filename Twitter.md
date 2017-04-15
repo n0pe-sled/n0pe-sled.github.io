@@ -1,5 +1,6 @@
 ---
 title : Twitter
-permalink: /Twitter
-redirect_to: http://www.twitter.com/n0pe_sled
 ---
+<script language="javascript">
+  window.location = "https://twitter.com/n0pe_sled";
+</script>

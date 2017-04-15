@@ -4,6 +4,7 @@ title:  "From Patch Tuesday to DA"
 date:   2017-03-17 19:45:31 +0530
 categories: Archive
 author: Julian Catrambone
+tags: [Priv-Esc,Exploit]
 ---
 
 Recently on an assessment I was stuck in the context of a user with low privileges on a Windows Server 2012 R2 system. This server functioned as a Remote Desktop server for the organization. I knew that if we could escalate to local administrator on that server, we would be able to use mimikatz to steal Domain Administrator credentials.

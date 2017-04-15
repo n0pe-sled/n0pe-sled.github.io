@@ -4,6 +4,7 @@ title:  "WMI Persistence with Cobalt Strike"
 date:   2017-01-20 19:45:31 +0530
 categories: Archive
 author: Julian Catrambone
+tags: [WMI, Persistence]
 ---
 
 Lets be honest implementing persistence on a pentest can be hard, messy, and get you caught.  Fuzzy Security did a great overview of some of the most common techniques used today and how to implement them.  You can find that blog post [here](http://www.fuzzysecurity.com/tutorials/19.html).

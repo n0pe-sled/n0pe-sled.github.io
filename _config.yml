@@ -15,7 +15,7 @@ twitter_username: n0pe_sled
 github_username:  jcatrambone94
 paginate: 5
 
-gems: [jekyll-paginate, kramdown, jekyll-redirect-from]
+gems: [jekyll-paginate, kramdown]
 # Build settings
 markdown: kramdown
 google_analytics: UA-93958329-1

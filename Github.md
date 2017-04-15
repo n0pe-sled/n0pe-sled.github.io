@@ -1,5 +1,6 @@
 ---
 title : Github
-permalink: /Github
-redirect_to: http://www.github.com/jcatrambone94
 ---
+<script language="javascript">
+  window.location = "https://github.com/n0pe-sled";
+</script>
