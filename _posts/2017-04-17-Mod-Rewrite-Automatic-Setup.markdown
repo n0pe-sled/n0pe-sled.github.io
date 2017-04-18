@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mod-Rewrite Automatic Setup"
+title:  "Mod_Rewrite Automatic Setup"
 date:   2017-04-17 19:45:31 +0530
 categories: Archive
 author: Julian Catrambone
