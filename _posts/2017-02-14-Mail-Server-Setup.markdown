@@ -7,7 +7,7 @@ author: Julian Catrambone
 tags: [Phishing,Server-Setup]
 ---
 
-Setting up a phishing server is a very long and tedious process. It can take hours to setup, and can be compromised in minutes. The esteemed gentlemen [@cptjesus](https://twitter.com/cptjesus) and [@Killswitch_GUI](https://twitter.com/Killswitch_GUI) have already made leaps and bounds in this arena. I took everything that I learned from them on setting up a server, and applied it to a bash script to automate the process. Before we get to the script, let’s go over the basics to setting up a mail server.
+Setting up a phishing server is a very long and tedious process. It can take hours to setup and can be compromised in minutes. The esteemed gentlemen [@cptjesus](https://twitter.com/cptjesus) and [@Killswitch_GUI](https://twitter.com/Killswitch_GUI) have already made leaps and bounds in this arena. I took everything that I learned from them on setting up a server and applied it to a bash script to automate the process. Before we get to the script, let’s go over the basics to setting up a mail server.
 
 First, let’s outline the process, then dive deeper into each step:
 
@@ -22,55 +22,55 @@ First, let’s outline the process, then dive deeper into each step:
 
 ## 1) Obtain a VPS/Server/IP trusted by the target: ##
 
-To use this script, you must have a Domain Name, and access to a server running Debian 8. You must have the ability to set the PTR record of the IP Address assigned to your server. There are many different options available to purchase a virtual private server(VPS). Some notable ones include [DigtalFyre](https://www.digitalfyre.com), [Linode](https://www.linode.com), and [DigitalOcean](https://www.digitalocean.com/)
+To use this script, you must have a Domain Name, and access to a server running Debian 8. You must have the ability to set the PTR record for the IP Address assigned to your server. There are many different options available to purchase a virtual private server(VPS). Some notable ones include [DigtalFyre](https://www.digitalfyre.com), [Linode](https://www.linode.com), and [DigitalOcean](https://www.digitalocean.com/)
 
 ## 2) Setup Secure Access to the Server ##
 
-The industry standard for accessing a server remotely is through SSH. Ideally, SSH should only be accessible to a single account with low privileges. root login and password authentication should also be disabled. The Command “Setup SSH” will prompt you to create an account to be used for SSH Authentication. Once the account is setup the script uses that account to create an “.ssh” directory. It will also edit /etc/ssh/sshd_config to only allow that user to authenticate, and prevent remote root logins.
+The industry standard for accessing a server remotely is through SSH. Ideally, SSH should only be accessible to a single account with low privileges. Root login and password authentication should also be disabled. The Command “Setup SSH” will prompt you to create an account to be used for SSH Authentication. Once the account is setup, the script uses that account to create a “.ssh” directory. It will also edit /etc/ssh/sshd_config to only allow that user to authenticate, and prevent remote root logins.
 
 ## 3) Disable ipv6 and remove Exim
 
-Debian 8 comes with the Exim mail service by default. Exim can cause problems when installing Postfix and should be removed. On the same note, IPv6 can create additional problems and should be disabled. The command “Debian Prep” will remove Exim, and disable IPv6. The script will also prompt you for the Mail Server’s Domain Name. It will use this Domain name to change the Hostname of the System. After all of these changes, the system will reboot.
+Debian 8 comes with the Exim mail service by default. Exim can cause problems when installing Postfix and should be removed. On the same note, IPv6 can create additional challenges and should be disabled. The command “Debian Prep” will remove Exim, and disable IPv6. The script will also prompt you for the Mail Server’s Domain Name. It will use this Domain name to change the Hostname of the System. After all of these changes, the system will reboot.
 
 ## 4) Install SSL Certs From Lets Encrypt ##
 
-We will need a working SSL Certificate in order to use TLS with Postfix authentication. To create this, ensure that you have set the A record on your Domain Name to the IP address of the Server and run the “Install SSL” command. It will prompt you for the Domain Name again, and then begin the process of creating the SSL Certs.
+We will need a working SSL Certificate to use TLS with Postfix authentication. To create this, ensure that you have set the A record on your Domain Name to the IP address of the Server and run the “Install SSL” command. It will prompt you for the Domain Name again, and then begin the process of creating the SSL Certs.
 
 ## 5) Installing Postfix and Dovecot (MailServer): ##
 
-Now that all of the prerequisites are complete, we can start installing the actual mail server. In order to make a mail server appear legitimate, it must have a reverse PTR record set up correctly and employ the following elements:
+Now that all of the prerequisites are complete, we can start installing the actual mail server. To make a mail server appear legitimate, it must have a reverse PTR record set up correctly and employ the following elements:
 
 1. Sender Policy Framework (SPF)
 2. DomainKeys Identified Mail (DKIM)
 3. Domain Message Authentication, Reporting, and Conformance (DMARC)
 
-In order to setup the Mail Server correctly, we need more information.  After running the command "Install Mail Server" you will be prompted for the three things.
+To setup the Mail Server correctly, we need more information.  After running the command "Install Mail Server" you will be prompted for the three things.
 
 1. Domain Name for the mail server
 2. A user to receive mail for the root account
 3. Relay Host IP address
 
-These inputs should be rather self explanatory.  The Domain name should be the same name that is set to the host in DNS.  The user set to receive email for the root account should be set to the user created when establishing SSH access. Finally the relay host is the host that is running your phishing framework.  **If you are hosting your phishing framework on the same VPS then just leave this input blank**.  Otherwise enter the IP address of the system hosting GoPhish or your Cobalt Strike teamserver.
+These inputs should be rather self-explanatory.  The Domain name should be the same name that is set to the host in DNS.  The user configured to receive email for the root account should be set to the user created when establishing SSH access. Finally, the relay host is the host that is running your phishing framework.  **If you are hosting your phishing framework on the same VPS then just leave this input blank**.  Otherwise, enter the IP address of the system hosting GoPhish or your Cobalt Strike team server.
 
-Once the command has finished you should see a service status report for Postfix, Dovecot, OpenDKIM, and OpenDMARC. Each of these services should report “active (running)” as pictured below.
+Once the command has finished, you should see a service status report for Postfix, Dovecot, OpenDKIM, and OpenDMARC. Each of these services should report “active (running)” as pictured below.
 ![Mail-Server-Status](https://blog.inspired-sec.com/assets/Mail-Server-Setup/service-status.png)
 
 ## 6) Add Aliases ##
 
-Once the server is up and running, we need to tell it where to send mail to and from. Using the command “Add Aliases”, assign the user account you created earlier to receive mail for root, and then chose an alias to test from.
+Once the server is up and running, we need to tell it where to send mail to and from. Using the command “Add Aliases”, assign the user account you created earlier to receive mail for root and then chose an alias to test from.
 
 ## 7) Configure DNS Entries ##
 
-Finally we can add DNS entries to our domain to ensure that SPF, DKIM, and DMARC are working properly. Using the command “Get DNS Entries” will print the DNS entries to the console, as shown below.
+Finally, we can add DNS entries to our domain to ensure that SPF, DKIM, and DMARC are working properly. Using the command “Get DNS Entries” will print the DNS entries to the console, as shown below.
 ![dns](https://blog.inspired-sec.com/assets/Mail-Server-Setup/dns.png)
 
 ## 8) Testing your new mail server ##
 
-To test your new mail server, send an email using the mail command! Simply run mail target@example.com on the command line, and then follow the prompts. Then check to see if the email was delivered. You can also use tools like
-[DKIM Validator](http://dkimvalidator.com/) to check that DKIM is passing, and [MX Toolbox](http://mxtoolbox.com/) for pretty much everything else.
+To check your new mail server, send an email using the mail command! Simply run mail target@example.com on the command line, and then follow the prompts. Then check to see if the email was delivered. You can also use tools like
+[DKIM Validator](http://dkimvalidator.com/) to check that DKIM is passing, and [MX Toolbox](http://mxtoolbox.com/) for nearly everything else.
 
 ## In Conclusion ##
 
-Phishing is a hard and painful process and this script is only part of the battle. Some organizations have hardened spam filters that can be incredibly difficult to get around. Things like domain categorization, and domain age can help but ultimately may still not be enough. In my testing, this script will get through to Gmail inboxes on DigitalFyre’s infrastructure. However, the story is different when used with Digital Ocean.  You can find the script on Github [here](https://github.com/jcatrambone94/Postfix-Server-Setup).
+Phishing is a hard and painful process, and this script is only part of the battle. Some organizations have hardened spam filters that can be incredibly difficult to get around. Things like domain categorization and domain age can help but ultimately may still not be enough. In my testing, this script will get through to Gmail inboxes on DigitalFyre’s infrastructure. However, the story is different when used with Digital Ocean.  You can find the script on Github [here](https://github.com/jcatrambone94/Postfix-Server-Setup).
 
-I will be following up this post up with a guide on how I phish with these servers using popular tools like Cobalt Strike and GoPhish
+I will be following up this post up with a guide on how I Phish with these servers using traditional tools like Cobalt Strike and GoPhish
