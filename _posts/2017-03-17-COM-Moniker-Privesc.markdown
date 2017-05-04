@@ -3,7 +3,6 @@ layout: post
 title:  "From Patch Tuesday to DA"
 date:   2017-03-17 19:45:31 +0530
 categories: Archive
-author: Julian Catrambone
 tags: [Priv-Esc,Exploit]
 ---
 

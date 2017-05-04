@@ -3,7 +3,6 @@ layout: post
 title:  "Mod_Rewrite Automatic Setup"
 date:   2017-04-17 19:45:31 +0530
 categories: Archive
-author: Julian Catrambone
 tags: [Mod-Rewrite, Phishing, Server-Setup]
 ---
 
